@@ -19,7 +19,7 @@ response = requests.get(Request_url)
 #Check if response was successful and set variable data to data received
 if response.status_code == 200:
     data = response.json()
-    #(Kelvin − 273.15) × 9/5 + 32 = 80.33°F
+    #Kelvin to fahrenheit formula: (Kelvin − 273.15) × 9/5 + 32
     temp = round((data['main']['temp'] - 273.15) * 9/5 + 32)
     print(temp, "degrees fahrenheit")
 else:
